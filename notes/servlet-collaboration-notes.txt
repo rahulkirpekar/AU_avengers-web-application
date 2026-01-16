@@ -1,0 +1,20 @@
+Servlet Collaboration:-
+----------------------
+
+	FirstServlet------------->SecondServlet------------->ThirdServlet
+(request,response)----------------------|
+
+	1.request:-
+	--------------
+
+	FirstServlet:-
+	---------------
+		RequestDispatcher rd = request.getRequestDispatcher("secondServlet");
+		rd.forward(request,response);
+
+
+		rd.include(request,response);
+
+
+
+	2.response
