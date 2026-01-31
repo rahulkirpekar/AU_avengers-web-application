@@ -1,0 +1,120 @@
+JSP - Java Server Pages:-
+----------------------------
+	Jsp	 = [90% HTML Code] + [10% JAVA Code]
+	 |
+	Servlet = [90% Java Code] + [10% HTML Code]
+----------------------------------------------------------------------
+
+
+FirstServlet.java(Servlet):-
+------------------------------
+FirstServlet.java:-
+-------------------
+		1.init()
+		2.service()
+		3.destroy()
+
+
+	1. Compile(FirstServlet.java---FirstServlet.class)
+	     |	
+	2. FirstServlet.class(Run)
+	     |	
+	3. Output
+
+login.jsp(Jsp):-
+------------------
+		   // Jsp------->Servlet	
+	1. Transalte(login.jsp-->login_jsp.java)
+
+
+	login_jsp.java:-
+	-----------------
+		1. _jspInit()
+		2._JspService()
+		3._JspDestroy()
+		
+		//  Java File ---> Class File
+	2. Compile(login_jsp.java--->login_jsp.class)
+
+	3. run(login_jsp.class---Run--->Output)
+
+
+
+public class login_jsp extends HttpJspBase
+{
+	3. Dm's / Member Function
+	int getCube(int no)
+	{
+		return (no*no*no);
+	}
+
+	init()
+	{
+
+	}
+	service()
+	{
+		1.
+
+		out.print(2. argument);
+	}
+	destroy()
+	{
+
+	}
+}
+
+
+
+Java Scripting Elements:-
+----------------------------
+
+	1. Scriptlet Tag---[service(){....}]
+	--------------------------------------
+
+		<%
+			Java Code
+		%>
+
+	2. Expression Tag[service(){  out.print(argument Java code) }]:-
+	------------------------------------------------------------------
+
+		<%= Java Code %>
+
+	3. Declaration Tag:-
+	--------------------
+		<%!
+			int getCube(int no)
+			{
+				return (no*no*no);
+			}
+		%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

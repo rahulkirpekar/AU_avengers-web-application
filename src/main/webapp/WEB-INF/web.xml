@@ -18,7 +18,6 @@
     <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
 
-
 	<context-param>
 		<param-name>driverName</param-name>
 		<param-value>com.mysql.cj.jdbc.Driver</param-value>
@@ -119,18 +118,16 @@
 	 	<servlet-class>com.royal.controller.SixthServlet</servlet-class>
 	 	
 	 	<init-param>
-	 		<param-name>lang1</param-name>
-	 		<param-value>C Language</param-value>
+	 		<param-name>subj1</param-name>
+	 		<param-value>Math</param-value>
 	 	</init-param>
-	 	
-	 	<init-param>
-	 		<param-name>lang2</param-name>
-	 		<param-value>C++ Language</param-value>
+		 	<init-param>
+	 		<param-name>subj2</param-name>
+	 		<param-value>Science</param-value>
 	 	</init-param>
-	 	
-	 	<init-param>
-	 		<param-name>lang3</param-name>
-	 		<param-value>CoreJava Language</param-value>
+		 	<init-param>
+	 		<param-name>subj3</param-name>
+	 		<param-value>English</param-value>
 	 	</init-param>
 	 	
 	 </servlet>
@@ -142,6 +139,19 @@
 	 <servlet>
 	 	<servlet-name>SevenServlet</servlet-name>
 	 	<servlet-class>com.royal.controller.SevenServlet</servlet-class>
+	 	<init-param>
+	 		<param-name>lang1</param-name>
+	 		<param-value>C Language</param-value>
+	 	</init-param>
+		 	<init-param>
+	 		<param-name>lang2</param-name>
+	 		<param-value>C++ Language</param-value>
+	 	</init-param>
+		 	<init-param>
+	 		<param-name>lang3</param-name>
+	 		<param-value>Core Java</param-value>
+	 	</init-param>
+	 	
 	 </servlet>
 	 <servlet-mapping>
 	 	<servlet-name>SevenServlet</servlet-name>
@@ -166,6 +176,58 @@
 	 	<servlet-name>NineServlet</servlet-name>
 	 	<url-pattern>/NineServlet</url-pattern>
 	 </servlet-mapping>
+	 
+	 	    <servlet>
+	 	<servlet-name>TenthServlet</servlet-name>
+	 	<servlet-class>com.royal.controller.TenthServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>TenthServlet</servlet-name>
+	 	<url-pattern>/TenthServlet</url-pattern>
+	 </servlet-mapping>
+	 
+	 <servlet>
+	 	<servlet-name>EleventhServlet</servlet-name>
+	 	<servlet-class>com.royal.controller.EleventhServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>EleventhServlet</servlet-name>
+	 	<url-pattern>/EleventhServlet</url-pattern>
+	 </servlet-mapping>
+	 
+	 
+	 <servlet>
+	 	<servlet-name>TwelveServlet</servlet-name>
+	 	<servlet-class>com.royal.controller.TwelveServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>TwelveServlet</servlet-name>
+	 	<url-pattern>/TwelveServlet</url-pattern>
+	 </servlet-mapping>
+
+
+	 <servlet>
+	 	<servlet-name>InsertStudentServlet</servlet-name>
+	 	<servlet-class>com.royal.controller.InsertStudentServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>InsertStudentServlet</servlet-name>
+	 	<url-pattern>/InsertStudentServlet</url-pattern>
+	 </servlet-mapping>
+
+
+	 <servlet>
+	 	<servlet-name>ListStudentServlet</servlet-name>
+	 	<servlet-class>com.royal.controller.ListStudentServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>ListStudentServlet</servlet-name>
+	 	<url-pattern>/ListStudentServlet</url-pattern>
+	 </servlet-mapping>
+
+
+	 
+	 
 	 
 </web-app>
 

@@ -1,0 +1,54 @@
+Data Sharing Scope/ Attributes in servlet:-
+---------------------------------------------
+
+1. setAttribute(String key,Object value);
+2. Object value = getAttribute(String key);
+3. removeAttribute(String key);
+
+
+
+	2. request
+
+		FirstServlet(request,response)------------------>SecondServlet(request,response)
+		   |							  ^
+		StudentBean s = new StudentBean(1,"Rahul",12);		  |  StudentBean s = (StudentBean)request.getAttribute("student");
+		   |							  |
+		request.setAttribute("student",s);			  |	
+		   |							  |	
+RequestDispatcher rd = request.getRequestDispatcher("SecondServlet");  	  |
+									  |					
+rd.forward(request,response);//---------------------------------------------
+					
+
+
+	3. session 
+	4. application
+	
+	
+	
+	Data Sharing Scope:-
+-------------------
+	1. request
+		1. setAttribute(String key,Object value);
+		2. Object value = getAttribute(String key);
+		3. removeAttribute(String key);	
+
+	2. session
+		1. setAttribute(String key,Object value);
+		2. Object value = getAttribute(String key);
+		3. removeAttribute(String key);	
+
+
+		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(true);
+		HttpSession session = request.getSession(false);
+
+		      session[Duration]
+	login<-------------------------------->logout
+
+
+
+	3. application
+		1. setAttribute(String key,Object value);
+		2. Object value = getAttribute(String key);
+		3. removeAttribute(String key);	
