@@ -46,7 +46,7 @@
 
     <div class="login-container">
         <h2>Login</h2>
-        <form action="process.jsp">
+        <form action="LoginServlet">
             <label>Username</label>
             <input type="text" name="username" placeholder="Enter username" required>
 

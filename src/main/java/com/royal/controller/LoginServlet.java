@@ -3,6 +3,10 @@ package com.royal.controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import com.royal.bean.UserBean;
+import com.royal.dao.UserDao;
+import com.royal.util.StringUtils;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -18,8 +22,16 @@ public class LoginServlet extends HttpServlet
 		
 		PrintWriter out=	response.getWriter();
 		
-		out.print("<b>Username : </b>" + username+"</br>");
-		out.print("<b>Password : </b>" + password+"</br>");
-		
+		if(StringUtils.isValidString(username) && StringUtils.isValidString(password)) 
+		{
+			UserDao userDao = new UserDao();
+			
+			UserBean userBean = userDao.authenticateLogin(username, password);
+			
+			
+		}else 
+		{
+			
+		}
 	}
 }
