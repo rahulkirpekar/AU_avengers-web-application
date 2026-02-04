@@ -134,6 +134,10 @@ public class InsertStudentServlet extends HttpServlet
 			request.setAttribute("addressErr","<font color='red'>Please Select Valid Address.</font>");
 		}
 		
+		// sbean---store into request
+		
+		request.setAttribute("sbean", sbean);
+		
 		RequestDispatcher rd = null;
 		
 		if(flag) 

@@ -113,4 +113,40 @@ public class StudentBean
 		this.address = address;
 	}
 	
+	
+	public String getHobbieStr() 
+	{
+		String hobbiesStr = "";
+		
+		for (int i = 0; i < hobbies.length; i++) 
+		{
+			if (i < hobbies.length-1) 
+			{
+				hobbiesStr = hobbiesStr + hobbies[i] +",";				
+			} else 
+			{
+				hobbiesStr = hobbiesStr + hobbies[i];				
+			}
+		}
+		return hobbiesStr;
+	}
+	
+	
+	
+	public boolean isSelectedHobby(String value) 
+	{
+		if(hobbies == null) 
+		{
+			return false;
+		}
+		
+		for(int i = 0 ; i < hobbies.length;i++) 
+		{
+			if(hobbies[i].equals(value)) 
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 }
