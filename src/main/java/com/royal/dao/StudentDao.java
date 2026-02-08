@@ -103,4 +103,34 @@ public class StudentDao
 		System.out.println(new StudentDao().getAllStudentRecords().size());
 		
 	}
+
+	public int deleteStudentById(int id) 
+	{
+		String deleteQuery = "DELETE FROM student WHERE id = ?";
+		
+		Connection conn = DBConnection.getConnection();
+		PreparedStatement pstmt = null;
+		int rowsAffected = 0;
+		if (conn!=null) 
+		{
+			try 
+			{
+				pstmt = conn.prepareStatement(deleteQuery);
+				
+				pstmt.setInt(1, id);
+				
+				System.out.println("pstmt : "  +pstmt);
+				
+				rowsAffected = pstmt.executeUpdate();
+				
+			} catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		} else 
+		{
+			System.out.println("StudentDao--deleteStudent Db not connected");
+		}
+		return rowsAffected;
+	}
 }

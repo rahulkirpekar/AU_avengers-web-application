@@ -22,3 +22,15 @@ CREATE TABLE student
 
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+--------------------------------------
+
+User(Table)
+	id --- Auto Increment primary key
+	name
+	email
+	password
+		
+		
+		
+		
+			

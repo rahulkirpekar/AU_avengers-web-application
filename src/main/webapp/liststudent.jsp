@@ -80,7 +80,7 @@
                                 <a href="editStudent?id=<%=s.getId()%>" class="btn btn-sm btn-warning">
                                     Edit
                                 </a>
-                                <a href="deleteStudent?id=<%=s.getId()%>"
+                                <a href="DeleteStudentServlet?id=<%=s.getId()%>"
                                    class="btn btn-sm btn-danger"
                                    onclick="return confirm('Are you sure you want to delete this record?');">
                                     Delete
